@@ -45,7 +45,6 @@ async def process_help_command(message: types.Message):
 @dp.message_handler(content_types=['text'])
 async def echo_download_message(message: types.Message):
     try:
-        
         echo_download=yt.Downloader(message.text)
         await message.reply("Побачила, починаю закачку...")        
         videonote = open(echo_download.download_video(), 'rb')
