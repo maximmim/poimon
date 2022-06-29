@@ -15,7 +15,7 @@ import yt_download as yt
 import config 
 
 
-bot = Bot(config.TOKEN)
+bot = Bot(token="5312847705:AAE0ii_TUhEeuNPRV52iiFmB0bsEInhANt4")
 URL = "https://painmo.herokuapp.com/"
 dp = Dispatcher(bot)
 
