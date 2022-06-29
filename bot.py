@@ -44,21 +44,10 @@ async def process_help_command(message: types.Message):
     await message.delete()
 @dp.message_handler(content_types=['text'])
 async def echo_download_message(message: types.Message):
-    if message.text == 'start':
-            await message.reply("Привіт!\n Я Паймон і допоможу завантажити відео з будь-якого сайту якщо потрібна допомога пиши /help")
-    elif message.text == 'help':
-        await message.reply("Надішліть мені посилання на відео \n і я допоможу завантажити його")
-
     try:
         
         echo_download=yt.Downloader(message.text)
-        await message.reply("Побачила, починаю закачку...")
-        time.sleep(2)
-        '''await message.reply("Генерирую id...")
-        time.sleep(4)
-        await message.reply(random_id())
-        '''
-        
+        await message.reply("Побачила, починаю закачку...")        
         videonote = open(echo_download.download_video(), 'rb')
      
     except:
